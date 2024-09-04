@@ -7,19 +7,19 @@
     />
     <span :class="{ completed: todo.completed }">{{ todo.text }}</span>
     <div class="actions">
-      <button @click="$emit('edit', todo.id)" class="icon-button">
+      <!-- <button @click="$emit('edit', todo.id)" class="icon-button">
         <Pencil size="18" />
       </button>
       <button @click="$emit('delete', todo.id)" class="icon-button">
         <Trash2 size="18" />
-      </button>
+      </button> -->
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import { defineProps, defineEmits } from 'vue';
-import { Pencil, Trash2 } from 'lucide-vue-next';
+// import { Pencil, Trash2 } from 'lucide-vue-next';
 
 interface Todo {
   id: number;
