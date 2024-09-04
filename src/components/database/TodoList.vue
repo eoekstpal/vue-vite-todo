@@ -46,7 +46,7 @@
 import { ref, computed, onMounted } from 'vue';
 import TodoItem from './TodoItem.vue';
 import EditTodoModal from './EditTodoModal.vue';
-import { supabase } from '@/services/supabase';
+import { supabase } from '../../services/supabase';
 
 interface Todo {
   id: number;
