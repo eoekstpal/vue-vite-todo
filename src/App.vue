@@ -2,7 +2,7 @@
   <div class="app-container">
     <div class="mobile-container">
       <LoginPage v-if="!user" />
-      <TodoList v-else />
+      <TodoList v-else :user="user" />
     </div>
   </div>
 </template>

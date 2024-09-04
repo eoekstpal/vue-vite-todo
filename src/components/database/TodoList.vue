@@ -1,6 +1,6 @@
 <template>
   <div class="todo-app">
-    <h1 class="app-title">My Todo List</h1>
+    <h1 class="app-title">{{ user.user_metadata.name }}'s' Todo List</h1>
     <form @submit.prevent="addTodo" class="todo-form">
       <input
         v-model="newTodo"
@@ -47,13 +47,13 @@ import { ref, computed, onMounted } from 'vue';
 import TodoItem from './TodoItem.vue';
 import EditTodoModal from './EditTodoModal.vue';
 import { supabase } from '../../services/supabase';
+import {User} from "@supabase/supabase-js";
+import {Todo} from '../../types/todo'
 
-interface Todo {
-  id: number;
-  text: string;
-  completed: boolean;
-}
 
+defineProps<{
+ user: User;
+}>();
 const todos = ref<Todo[]>([]);
 const newTodo = ref('');
 
