@@ -170,95 +170,114 @@ async function saveEdit(newText: string) {
 </script>
 
 <style scoped>
+
 .todo-app {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 40px 20px;
-  font-family: 'Arial', sans-serif;
-  background-color: #f7f7f7;
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  padding:2rem;
+}
+.todo-list {
+  padding: 20px;
 }
 
 .app-title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
   text-align: center;
-  color: #2c3e50;
-  margin-bottom: 30px;
-  font-size: 2.5em;
+  color: #333;
 }
 
 .todo-form {
   display: flex;
-  margin-bottom: 30px;
+  margin-bottom: 1.5rem;
 }
 
 .todo-input {
   flex-grow: 1;
-  padding: 12px;
-  font-size: 16px;
-  border: none;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
   border-radius: 5px 0 0 5px;
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .add-button {
-  padding: 12px 20px;
-  font-size: 16px;
-  background-color: #3498db;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #4CAF50;
   color: white;
   border: none;
   border-radius: 0 5px 5px 0;
   cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.add-button:hover {
-  background-color: #2980b9;
 }
 
 .tabs {
   display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 1rem;
 }
 
 .tab-button {
-  padding: 10px 20px;
-  font-size: 14px;
-  background-color: #ecf0f1;
-  color: #7f8c8d;
+  flex-grow: 1;
+  padding: 10px;
+  font-size: 0.9rem;
+  background-color: #f1f1f1;
   border: none;
   cursor: pointer;
-  transition: all 0.3s;
-}
-
-.tab-button:first-child {
-  border-radius: 5px 0 0 5px;
-}
-
-.tab-button:last-child {
-  border-radius: 0 5px 5px 0;
 }
 
 .tab-button.active {
-  background-color: #3498db;
+  background-color: #4CAF50;
   color: white;
 }
 
-.todo-list {
+.todo-items {
   list-style-type: none;
   padding: 0;
 }
 
-.todo-list-enter-active,
-.todo-list-leave-active {
-  transition: all 0.5s ease;
+.todo-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
 }
 
-.todo-list-enter-from,
-.todo-list-leave-to {
-  opacity: 0;
-  transform: translateX(30px);
+.todo-checkbox {
+  margin-right: 10px;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.todo-actions {
+  margin-left: auto;
+}
+
+.action-button {
+  padding: 5px 10px;
+  font-size: 0.8rem;
+  background-color: #008CBA;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.action-button.delete {
+  background-color: #f44336;
+}
+
+.sign-out-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  font-size: 1rem;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 </style>
-Last edited 1분 전

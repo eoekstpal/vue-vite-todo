@@ -1,6 +1,6 @@
 <template>
     <div class="login-page">
-      <h1>Welcome to Todo App</h1>
+      <h1 class="app-title">Todo App</h1>
       <button @click="signInWithGoogle" class="google-login-btn">
         Sign in with Google
       </button>
@@ -32,14 +32,24 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 100%;
+    padding: 20px;
+  }
+  
+  .app-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #333;
   }
   
   .google-login-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #4285F4;
     color: white;
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 12px 24px;
+    font-size: 1rem;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -48,5 +58,11 @@
   
   .google-login-btn:hover {
     background-color: #357AE8;
+  }
+  
+  .google-logo {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
   }
   </style>
