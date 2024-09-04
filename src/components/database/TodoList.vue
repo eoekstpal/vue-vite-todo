@@ -174,9 +174,14 @@ async function saveEdit(newText: string) {
 .todo-app {
   height: 100%;
   padding:2rem;
+  overflow:hidden;
+  
 }
 .todo-list {
   padding: 20px;
+  height: 100%;
+  overflow-x:auto;
+  padding-bottom: 4rem;
 }
 
 .app-title {
@@ -231,6 +236,7 @@ async function saveEdit(newText: string) {
 .todo-items {
   list-style-type: none;
   padding: 0;
+  overflow:auto;
 }
 
 .todo-item {
