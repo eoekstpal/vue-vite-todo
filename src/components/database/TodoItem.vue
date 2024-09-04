@@ -66,7 +66,7 @@ import { defineProps, defineEmits } from 'vue';
 interface Todo {
   id: number;
   text: string;
-  is_completed: boolean;
+  completed: boolean;
 }
 
 defineProps<{
