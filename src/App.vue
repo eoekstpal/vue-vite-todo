@@ -41,6 +41,7 @@ html, body {
   overflow: hidden;
 }
 
+
 .app-container {
   display: flex;
   justify-content: center;

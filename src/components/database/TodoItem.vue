@@ -69,7 +69,7 @@ interface Todo {
   completed: boolean;
 }
 
-defineProps<{
+const { todo } = defineProps<{
   todo: Todo;
 }>();
 

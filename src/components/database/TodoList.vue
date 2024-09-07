@@ -6,6 +6,7 @@
         v-model="newTodo"
         placeholder="What needs to be done?"
         class="todo-input"
+        required
       />
       <button type="submit" class="add-button">Add</button>
     </form>
