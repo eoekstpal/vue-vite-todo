@@ -1,6 +1,5 @@
 <template>
   <div class="app-container">
-    <button>로그아웃</button>
     <div class="mobile-container">
       <LoginPage v-if="!user" />
       <TodoList v-else :user="user" />
