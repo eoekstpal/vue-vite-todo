@@ -1,5 +1,6 @@
 <template>
   <div class="app-container">
+    <button>로그아웃</button>
     <div class="mobile-container">
       <LoginPage v-if="!user" />
       <TodoList v-else :user="user" />
@@ -11,8 +12,8 @@
 import { ref, onMounted } from 'vue'
 import { supabase } from './services/supabase'
 import { User } from '@supabase/supabase-js'
-import LoginPage from './components/database/LoginPage.vue'
-import TodoList from './components/database/TodoList.vue'
+import LoginPage from './components/LoginPage.vue'
+import TodoList from './components/TodoList.vue'
 
 const user = ref<User | null>(null)
 

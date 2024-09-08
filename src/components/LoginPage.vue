@@ -8,7 +8,7 @@
   </template>
   
   <script setup lang="ts">
-  import { supabase } from '../../services/supabase'
+  import { supabase } from '../services/supabase'
   
   async function signInWithGoogle() {
     try {

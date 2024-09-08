@@ -47,9 +47,9 @@
 import { ref, computed, onMounted } from 'vue';
 import TodoItem from './TodoItem.vue';
 import EditTodoModal from './EditTodoModal.vue';
-import { supabase } from '../../services/supabase';
+import { supabase } from '../services/supabase';
 import {User} from "@supabase/supabase-js";
-import {Todo} from '../../types/todo'
+import {Todo} from '../types/todo'
 
 
 defineProps<{
